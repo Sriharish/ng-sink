@@ -10,7 +10,7 @@ import { VERSION } from '@angular/material';
 export class AppComponent {
   version = VERSION;
   navItems = [
-    { route: 'home', name: '' },
+    { route: 'home', name: 'Home' },
     { route: 'autocomplete', name: 'Autocomplete' },
     { route: 'badge', name: 'Badge' },
     { route: 'bottom-sheet', name: 'BottomSheet' },
