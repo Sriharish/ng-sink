@@ -1,9 +1,40 @@
-
-
-<!--
-Copyright Google LLC All Rights Reserved.
-
-Use of this source code is governed by an MIT-style license that can be
-found in the LICENSE file at https://angular.io/license
--->
-<router-outlet></router-outlet>
+<mat-sidenav-container class="demo-container">
+    <mat-sidenav #start role="navigation">
+      <mat-nav-list>
+        <a *ngFor="let navItem of navItems"
+           mat-list-item
+           (click)="start.close()"
+           routerLinkActive
+           #routerLinkActiveInstance="routerLinkActive"
+           [attr.tabindex]="routerLinkActiveInstance.isActive ? 0 : -1"
+           [routerLink]="[navItem.route]">
+          {{navItem.name}}
+        </a>
+  
+        <hr>
+  
+        <a mat-list-item
+           tabindex="-1"
+           (click)="start.close()"
+           [routerLink]="['']">
+          Baseline
+        </a>
+      </mat-nav-list>
+      <button mat-button tabindex="-1" (click)="start.close()">CLOSE</button>
+    </mat-sidenav>
+    <main>
+      <mat-toolbar color="primary">
+        <button mat-icon-button (click)="start.open('mouse')">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <div class="demo-toolbar">
+          <h1>Angular Material Kitchen Sink Enhanced</h1>
+        </div>
+      </mat-toolbar>
+  
+      <div #root="dir" dir="ltr" class="demo-content mat-app-background">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </mat-sidenav-container>
+  
