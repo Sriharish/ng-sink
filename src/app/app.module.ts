@@ -64,7 +64,7 @@ import { KITCHEN_SINK_ROUTES } from './routes';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    // CommonModule, // imported in KitchenSinkMaterialModule
+    CommonModule,
     FormsModule,
     HttpClientModule,
     LayoutModule,

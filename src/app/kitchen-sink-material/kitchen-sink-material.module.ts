@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { A11yModule } from '@angular/cdk/a11y';
 import { BidiModule } from '@angular/cdk/bidi';
@@ -63,7 +62,6 @@ import {
     CdkStepperModule,
     CdkTableModule,
     CdkTreeModule,
-    CommonModule,
     
     // Material
     MatAutocompleteModule,
