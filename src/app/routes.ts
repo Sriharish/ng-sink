@@ -10,7 +10,6 @@
 import { Routes } from '@angular/router';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { BadgeComponent } from './badge/badge.component';
-import { BaselineComponent } from './baseline/baseline.component';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
 import { ButtonComponent } from './button/button.component';
@@ -64,7 +63,6 @@ export const KITCHEN_SINK_ROUTES: Routes = [
   { path: 'autocomplete', component: AutocompleteComponent },
   { path: 'badge', component: BadgeComponent },
   { path: 'bottom-sheet', component: BottomSheetComponent },
-  { path: 'baseline', component: BaselineComponent },
   { path: 'button', component: ButtonComponent },
   { path: 'button-toggle', component: ButtonToggleComponent },
   { path: 'card', component: CardComponent },
