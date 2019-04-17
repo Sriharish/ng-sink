@@ -12,7 +12,7 @@
 
 ## Roadmap
 
-- Coming soon (after initial setup is complete)
+- Coming soon (after initial setup is complete)!
 
 ## Blog
 
