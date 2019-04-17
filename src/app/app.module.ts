@@ -1,60 +1,16 @@
 ;
 import { NotFoundComponent } from './not-found/not-found.component';
-import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { LayoutModule } from '@angular/cdk/layout';
+import { RouterModule } from '@angular/router';
+import { KitchenSinkMaterialModule } from './kitchen-sink-material/kitchen-sink-material.module';
 
-import {A11yModule} from '@angular/cdk/a11y';
-import {BidiModule} from '@angular/cdk/bidi';
-import {ObserversModule} from '@angular/cdk/observers';
-import {OverlayModule} from '@angular/cdk/overlay';
-import {PlatformModule} from '@angular/cdk/platform';
-import {PortalModule} from '@angular/cdk/portal';
-import {ScrollDispatchModule} from '@angular/cdk/scrolling';
-import {CdkStepperModule} from '@angular/cdk/stepper';
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
-import {
-  MatAutocompleteModule,
-  MatBadgeModule,
-  MatBottomSheetModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatFormFieldModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatTreeModule,
-} from '@angular/material';
-import {AppComponent} from './app.component';
+import { AppComponent } from './app.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { BadgeComponent } from './badge/badge.component';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
@@ -102,73 +58,19 @@ import { ScreenTypeComponent } from './screen-type/screen-type.component';
 import { VirtualScrollComponent } from './virtual-scroll/virtual-scroll.component';
 import { ExamplesComponent } from './examples/examples.component';
 import { HomeComponent } from './home/home.component';
-
-/**
- * NgModule that includes all Material modules that are required to serve the app.
- */
-@NgModule({
-  exports: [
-    // CDK
-    A11yModule,
-    BidiModule,
-    ObserversModule,
-    OverlayModule,
-    PlatformModule,
-    PortalModule,
-    ScrollDispatchModule,
-    CdkStepperModule,
-    CdkTableModule,
-    CdkTreeModule,
-    
-    // Material
-    MatAutocompleteModule,
-    MatBadgeModule,
-    MatBottomSheetModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatStepperModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
-    MatTreeModule,
-  ]
-})
-export class MaterialModule {}
+import { KITCHEN_SINK_ROUTES } from './routes';
 
 @NgModule({
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
-    CommonModule,
-    MaterialModule,
+    // CommonModule, // imported in KitchenSinkMaterialModule
     FormsModule,
+    HttpClientModule,
+    LayoutModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    KitchenSinkMaterialModule,
+    RouterModule.forRoot(KITCHEN_SINK_ROUTES),
   ],
   declarations: [AppComponent, AutocompleteComponent, BadgeComponent, BottomSheetComponent, BaselineComponent, ButtonComponent, ButtonToggleComponent, CardComponent, CheckboxComponent, ChipsComponent, ConnectedOverlayComponent, DatasetComponent, DatepickerComponent, DialogComponent, DrawerComponent, DragDropComponent, ExpansionComponent, FocusOriginComponent, GesturesComponent, GridListComponent, IconComponent, InputComponent, ListComponent, LiveAnnouncerComponent, MenuComponent, PaginatorComponent, PlatformComponent, PortalComponent, ProgressBarComponent, ProgressSpinnerComponent, RadioComponent, RippleComponent, SelectComponent, SidenavComponent, SlideToggleComponent, SliderComponent, SnackBarComponent, StepperComponent, TableComponent, TabsComponent, ToolbarComponent, TooltipComponent, TreeComponent, TypographyComponent, ScreenTypeComponent, VirtualScrollComponent, ExamplesComponent, HomeComponent, NotFoundComponent],
   bootstrap: [AppComponent],
