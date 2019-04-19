@@ -1,4 +1,4 @@
-# Angular Material Kitchen Sink Enhanced
+# ng-sink (Angular Material Kitchen Sink)
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-material2-kitchen-sink)
 
