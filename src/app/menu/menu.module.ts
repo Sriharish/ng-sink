@@ -1,10 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { KitchenSinkMaterialModule } from '../kitchen-sink-material/kitchen-sink-material.module';
+import { MenuComponent } from './menu.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: MenuComponent
+  }
+];
 
 @NgModule({
-  declarations: [],
+  declarations: [MenuComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    KitchenSinkMaterialModule,
+    RouterModule.forChild(routes)
   ]
 })
 export class MenuModule { }
