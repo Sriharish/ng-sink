@@ -9,7 +9,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { RouterModule } from '@angular/router';
 
 // Kitchen Sink Modules
-import { KitchenSinkMaterialModule } from './kitchen-sink-material/kitchen-sink-material.module';
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { KITCHEN_SINK_ROUTES } from './routes';
@@ -23,7 +23,7 @@ import { KITCHEN_SINK_ROUTES } from './routes';
     HttpClientModule,
     LayoutModule,
     ReactiveFormsModule,
-    KitchenSinkMaterialModule,
+    MaterialModule,
     RouterModule.forRoot(KITCHEN_SINK_ROUTES),
   ],
   declarations: [AppComponent],
