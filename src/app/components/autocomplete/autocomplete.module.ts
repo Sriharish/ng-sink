@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CoreModule } from '../../core/core.module';
 import { MaterialModule } from '../../material.module';
 import { AutocompleteComponent } from './autocomplete.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -14,7 +14,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [AutocompleteComponent],
   imports: [
-    CommonModule,
+    CoreModule,
     MaterialModule,
     RouterModule.forChild(routes)
   ]
