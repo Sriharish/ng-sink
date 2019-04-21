@@ -1,4 +1,4 @@
-<mat-sidenav-container class="demo-container">
+<mat-sidenav-container>
     <mat-sidenav #start role="navigation">
       <mat-nav-list>
         <a *ngFor="let navItem of navItems"
@@ -17,13 +17,16 @@
         <button mat-icon-button (click)="start.open('mouse')">
           <mat-icon>menu</mat-icon>
         </button>
-        <div class="demo-toolbar">
-          <h1>Angular Material Kitchen Sink Enhanced</h1>
-        </div>
+        <h1>Angular Material Kitchen Sink Enhanced</h1>
       </mat-toolbar>
-  
-      <div #root="dir" dir="ltr" class="demo-content mat-app-background">
-        <router-outlet></router-outlet>
+      <div #root="dir" dir="ltr">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box">
+                <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </mat-sidenav-container>
